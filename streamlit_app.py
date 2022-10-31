@@ -76,20 +76,21 @@ try:
 
 
 
-streamlit.stop()
-
-#import snowflake.connector
-my_cnx = snowflake.connector.connect(**streamlit.secrets["snowflake"])
-my_cur = my_cnx.cursor()
-my_cur.execute("SELECT fruit_name from fruit_load_list")
-#my_cur.execute("SELECT CURRENT_USER(), CURRENT_ACCOUNT(), CURRENT_REGION()")
-#my_data_row = my_cur.fetchone()
-my_data_rows = my_cur.fetchall()
-#streamlit.text("Hello from Snowflake:")
-streamlit.header("The Fruit Load List contains:")
-streamlit.dataframe(my_data_rows)
-
-add_my_fruit = streamlit.text_input('What fruit would you like to add?')
-streamlit.write('Thank for adding:  ', add_my_fruit)
-
-my_cur.execute("insert into fruit_load_list values ('from streamlit')")
+#streamlit.stop()
+#
+##import snowflake.connector
+#my_cnx = snowflake.connector.connect(**streamlit.secrets["snowflake"])
+#my_cur = my_cnx.cursor()
+#my_cur.execute("SELECT fruit_name from fruit_load_list")
+##my_cur.execute("SELECT CURRENT_USER(), CURRENT_ACCOUNT(), CURRENT_REGION()")
+##my_data_row = my_cur.fetchone()
+#my_data_rows = my_cur.fetchall()
+##streamlit.text("Hello from Snowflake:")
+#streamlit.header("The Fruit Load List contains:")
+#streamlit.dataframe(my_data_rows)
+#
+#add_my_fruit = streamlit.text_input('What fruit would you like to add?')
+#streamlit.write('Thank for adding:  ', add_my_fruit)
+#
+#my_cur.execute("insert into fruit_load_list values ('from streamlit')")
+#
